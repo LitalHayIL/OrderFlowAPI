@@ -1,8 +1,8 @@
 # OrderFlowAPI
 
-**Microservices Architecture**
+**REST API design**
 
-## Shopping Cart Service:
+## Cart Service:
 
 Endpoint: Post /api/order/cart.json
 
