@@ -23,11 +23,15 @@ Example request:
 Example response:
 ```
 {
-  "cartId": "456",
+  "orderId": "456",
   "tax":36.0,
   "subTotalAmount": 164.0,
-  "totalAmount": 200.0
-}
+  "totalAmount": 200.0,
+  "items": [
+     {"productId": "1234", "quantity": 2, "price":50},
+     {"productId": "2345", "quantity": 1, "price":100}
+   ],
+   "status":"pending"
 ```
 
 
@@ -42,7 +46,7 @@ Example request:
 ```
 {
    "customerId": "8080",
-   "cartId": "456",
+   "orderId": "456",
    "tax":36.0,
    "subTotalAmount": 164.0,
    "totalAmount": 200.0,
@@ -61,7 +65,7 @@ Example response:
 ```
 {
   "invoiceId": "789",
-  "cartId": "456",
+  "orderId": "456",
   "customerId": "8080",
   "totalAmount": 200.0
 }
@@ -117,7 +121,7 @@ Endpoint: Post /api/order/shipping.json
 Example request:
 ```
 {
-   "cartId": "456",
+   "orderId": "456",
    "name":"Lital Hay",
    "phone":"0545870006",
    "shipping_address":"17 boulevard, 123 apt 6 Brooklyn NY"
