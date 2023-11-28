@@ -14,8 +14,8 @@ Example request:
 {
  "customerId": "8080",
   "items": [
-    {"productId": "1234", "quantity": 2},
-    {"productId": "2345", "quantity": 1}
+    {"productId": "1234", "quantity": 2, "price":50},
+    {"productId": "2345", "quantity": 1, "price":100}
   ]
 }
 ```
