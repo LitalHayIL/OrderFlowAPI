@@ -43,6 +43,7 @@ Example request:
    "tax":36.0,
    "subTotalAmount": 164.0,
    "totalAmount": 200.0,
+   "currency": "USD",
     "items": [
       {"productId": "1", "quantity": 2, "price":50},
       {"productId": "2", "quantity": 1, "price":100}
@@ -96,7 +97,6 @@ Example response:
       "completed_at": 2023-10-12T07:05:27-04:00,
       "created_at": "2023-10-12T07:05:27-04:00",
       "currency": "USD",
-      "presentment_currency": "USD",
       "customer_id": 8080,
       "amount": "200.0"
     }
