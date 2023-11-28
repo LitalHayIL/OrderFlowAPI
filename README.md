@@ -4,6 +4,9 @@
 
 ## Cart Service:
 
+Event:CartUpdated
+Action: The customer makes a request with the contents of a shopping cart.
+
 Endpoint: Post /api/order/cart.json
 
 Example request:
@@ -125,6 +128,30 @@ Example response:
 ```
 {
  "tracking_number":12345678
+}
+```
+
+
+## Email Service:
+
+Event: InvoiceCreated, PaymentProcessed, OrderShipped
+Action: send information email.
+
+Endpoint: Post /api/order/shipping.json
+
+Example request:
+```
+{
+   "event": {name},
+   "name":"Lital Hay",
+   "email":"lital.naory@gmail.com"
+}
+```
+
+Example response:
+```
+{
+ "status":"OK"
 }
 ```
 
