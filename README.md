@@ -2,7 +2,7 @@
 
 **Microservices Architecture**
 
-1. Shopping Cart Service:
+## Shopping Cart Service:
 
 Endpoint: Post /api/order/cart.json
 
@@ -28,7 +28,7 @@ Example response:
 ```
 
 
-2. Billing Service:
+## Billing Service:
 
 Event: InvoiceCreated
 Action: The backend issues an invoice
@@ -63,7 +63,7 @@ Example response:
 }
 ```
 
-3. Payment Service
+## Payment Service
 Event: PaymentProcessed
 Action: The backend bills the customer using pre-approved 3rd party billing partner (e.g. stripe / PayPal / etc.)
 
@@ -104,7 +104,7 @@ Example response:
 ```
 
 
-4. Shipment Service:
+## Shipment Service:
 
 Event: OrderShipped
 Action: Ships the goods and provides a tracking number.
