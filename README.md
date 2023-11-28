@@ -7,7 +7,7 @@
 Endpoint: Post /api/order/cart.json
 
 Example request:
-
+```
 {
  "customerId": "8080",
   "items": [
@@ -15,15 +15,17 @@ Example request:
     {"productId": "2345", "quantity": 1}
   ]
 }
+```
 
 Example response:
-
+```
 {
   "cartId": "456",
   "tax":36.0,
   "subTotalAmount": 164.0,
   "totalAmount": 200.0
 }
+```
 
 
 2. Billing Service:
@@ -34,7 +36,7 @@ Action: The backend issues an invoice
 Endpoint: Post /api/order/invoice.json
 
 Example request:
-
+```
 {
    "customerId": "8080",
    "cartId": "456",
@@ -49,14 +51,17 @@ Example request:
     "phone":"0545870006",
     "shipping_address":"17 boulevard, 123 apt 6 Brooklyn NY"
 }
+```
 
 Example response:
+```
 {
   "invoiceId": "789",
   "cartId": "456",
   "customerId": "8080",
   "totalAmount": 200.0
 }
+```
 
 3. Payment Service
 Event: PaymentProcessed
@@ -65,14 +70,16 @@ Action: The backend bills the customer using pre-approved 3rd party billing part
 Endpoint: Post /api/order/payment.json
 
 Example request:
-
+```
 {
    "customerId": "8080",
    "invoiceId": "789",
    "totalAmount": 200.0
 }
+```
 
 Example response:
+```
 {
   "transactionId": 1071573807,
   "credit_card": {
@@ -94,6 +101,7 @@ Example response:
       "amount": "200.0"
     }
 }
+```
 
 
 4. Shipment Service:
@@ -104,16 +112,19 @@ Action: Ships the goods and provides a tracking number.
 Endpoint: Post /api/order/shipping.json
 
 Example request:
-
+```
 {
    "cartId": "456",
    "name":"Lital Hay",
    "phone":"0545870006",
    "shipping_address":"17 boulevard, 123 apt 6 Brooklyn NY"
 }
+```
 
 Example response:
+```
 {
  "tracking_number":12345678
 }
+```
 
